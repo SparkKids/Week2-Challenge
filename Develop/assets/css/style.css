@@ -104,6 +104,15 @@ main {
   line-height: 75px;
   font-size: 30px;
 } */
+.info-p {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: center;
+  max-width: 100%;
+  justify-content: space-around;
+}
 .picture {
   display: flex;
   flex-direction: column;
@@ -134,7 +143,9 @@ main {
   width: 100%;
 }
 
-/* .page-section>h2 {
+ .page-section-aside {
+  display: flex;
+  flex-direction: row;
   flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
@@ -143,20 +154,28 @@ main {
   line-height: 1.1;
 }
 
-.page-section>div {
+.page-section-main {
+  display: flex;
+  flex-direction: row;
   flex: 0 0 77%;
+  flex-wrap: wrap;
+  padding-right: 15px;
 }
- */
+ 
 .page-section p {
   margin-bottom: 20px;
 }
 
 .flex-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 97%;
 }
+/* .flex-container>a {
+  width: 45%;
+} */
 
 .flex-item img {
   width: 90%;
@@ -165,23 +184,38 @@ main {
 .flex-item {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
   padding: 10px;
-  flex: 0 0 40%;
-  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  flex: 1 1 100%;
+  width: 50%;
+  height: 33vh;  
 }
 
-/* feature first portfolio item */
-/* .flex-container .flex-item:first-child {
-  min-height: 400px;
+
+.page-section-main a.flex-container:first-child {
+  height: 50vh;
   flex-basis: 100%;
   width: 100%;
-} */
+} 
+/* feature first portfolio item */
 
+.page-section-main .flex-item>div>h3:first-child {
+  height: 50vh;
+  flex-basis: 100%;
+  width: 100%;
+}
+.page-section-main .flex-item:first-child {
+  height: 50vh;
+  flex-basis: 100%;
+  width: 100%;
+} 
 .flex-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -191,7 +225,8 @@ main {
   padding: 8px 10px;
 }
 
-.flex-item h3 {
+.flex-item>div>h3 {
+  background-color: var(--secondary);
   font-size: 1.6rem;
 }
 
@@ -228,30 +263,33 @@ main {
  .horiseon-seo {
 background-image: url(../images/Horiseon-Social-Solution-Services.png);
 background-size: cover;
-height: 300px;
-  
 }
 
-/*.led-wall {
-  
+.rocket-launch {
+  background-image: url(../images/Rocket-Launch-Info-and-News.png);
+  background-size: cover;
 }
 
-.react-calc {
-  
+.placeholder-1 {
+  background-image: url(../images/camera.jpg);
+  background-size: cover;  
 }
 
-.pastel-puzzles {
-  
+.placeholder-2 {
+  background-image: url(../images/tablet.jpg);
+  background-size: cover;  
 }
 
-.surf-report {
-  
-} */
+.placeholder-3 {
+  background-image: url(../images/wooden-spoons.jpg);
+  background-size: cover;  
+} 
 
 /* media queries */
 
-/* media queries for a max-width of 980px */
-@media screen and (max-width: 980px) {
+/* media queries for a max-width of 768px */
+/* TODO: add media query for a max-width of 768px */
+@media screen and (max-width: 768px) {
   header {
     padding: 0 0 10px 0;
     align-content: center;
@@ -274,12 +312,13 @@ height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: auto;
   }
   .page-section-aside {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex: 0 0 100%;
+    flex: 0 0 25%;
     align-content: center;
     border-right: none;
     border-bottom: 4px solid var(--primary);
@@ -287,6 +326,14 @@ height: 300px;
     text-align: left;
     font-size: 7vw;
   }
+  .page-section-main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 77%;
+    flex-wrap: wrap;
+    padding-right: 15px;
+  }
+  
 
   .flex-container {
     display: flex;
@@ -295,16 +342,24 @@ height: 300px;
     flex-wrap: wrap;
     align-content: center;
     width: 100%;
+    height: auto;
   }
   .flex-item {
     display: flex;
     flex-direction: column; /* Stacks items vertically */
-    align-items: flex-start; /* Centers items horizontally */
-    width: 100%;
-    height: 300px;
+    align-content: flex-start;
+    justify-content: flex-end;
+      width: 100%;
+    height: 33vh;  
   }
-  
-
+  .flex-item>h3 {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-content: flex-start;
+    justify-content: flex-end; 
+    width: 100%;
+    height: 33vh;  
+  }
 /*   .page-section>h2,
   .page-section>div {
     flex-direction: column;
@@ -331,22 +386,5 @@ height: 300px;
     
 
   }
-
-}
-
-/* TODO: add media query for a max-width of 768px */
-@media screen and (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 10px 0;
-    justify-content: center;
-    text-align: center;
-  }
-
-/*   .nav-section {
-    flex-direction: column;
-    align-content: center;
-  } */
 
 }
