@@ -1,0 +1,153 @@
+/*
+  Resets
+*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100%;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+​h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+​input,
+select,
+option,
+optgroup,
+textarea,
+button,
+pre,
+code {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+​ol,
+ul {
+  list-style: none;
+}
+
+/*
+  General Styles
+*/
+/*
+  Universal
+*/
+:root {
+  --light: #fff;
+  --light-accent: #f9f9fb;
+  --dark: #000;
+  --dark-accent: #222;
+  --dark-accent-action: #111;
+  --action: #563d7c;
+  --action-accent: #8570a5;
+  --disabled: #aaa;
+  --error: #ff0022;
+  --circle-color: #ffb100;
+
+  --foreground: var(--dark-accent);
+  --background: var(--light);
+}
+.darkmode {
+  --light: #fff;
+  --light-accent: #f9f9fb;
+  --dark: #000;
+  --dark-accent: #222;
+  --dark-accent-action: #111;
+  --action: #563d7c;
+  --action-accent: #8570a5;
+  --disabled: #aaa;
+  --error: #ff0022;
+  --circle-color: #ffb30038;
+
+  --foreground: var(--light);
+  --background: var(--dark-accent);
+
+}
+
+* {
+  transition: background-color ease-in .5s;
+}
+
+/*
+  Tags
+*/
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+header.landing-page {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+}
+
+header,
+footer {
+  padding: 2rem;
+}
+
+main {
+  height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-top: double 1rem; 
+  border-bottom: double 1rem; 
+
+}
+
+/*
+  Classes
+*/
+
+/*
+  IDs
+*/
+#landing-page {
+  display: flex;
+  flex-direction: row;
+}
+#blog-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  border-left: double 1rem;
+  overflow: auto;
+}
+#blog-section h3 {
+  justify-content: center;
+
+}
+#toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+  border: groove black;
+  background-color: var(--background);
+  color: var(--forground); 
+}
+
